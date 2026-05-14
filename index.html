@@ -20,24 +20,29 @@
     .nav-links { display: flex; list-style: none; gap: 1.6rem; }
     .nav-links a { font-size: 1.2rem; color: #444; font-weight: 400; }
     .nav-links a:hover { color: #0066cc; text-decoration: none; }
-    .nav-links a.active { font-weight: 700; color: #111; pointer-events: none; }
     .nav-home.active { font-weight: 700; color: #111; pointer-events: none; }
 
     .page { max-width: 1200px; margin: 0 auto; padding: 3rem 3rem 4rem; }
 
-    .hero { display: grid; grid-template-columns: 280px 1fr; gap: 2.5rem; align-items: start; margin-bottom: 2.5rem; }
-    .hero-photo img { width: 280px; display: block; border: 1px solid #ddd; }
-    .hero-bio h1 { font-size: 2.0rem; font-weight: 700; color: #111; margin-bottom: 0.5rem; text-align: center; }
-
+    /* ── Centered header ── */
+    .profile-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .profile-header h1 {
+      font-size: 2.0rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 0.4rem;
+    }
     .status-line {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.55rem;
       font-size: 1.05rem;
       color: #555;
-      margin-bottom: 1.2rem;
     }
     .jm-badge {
       display: inline-flex;
@@ -53,7 +58,16 @@
       border-radius: 3px;
     }
 
-    .hero-bio p { font-size: 1.2rem; color: #333; margin-bottom: 1.2rem; }
+    /* ── Photo + bio row ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 2.5rem;
+    }
+    .hero-photo img { width: 280px; display: block; border: 1px solid #ddd; }
+    .hero-bio p { font-size: 1.0rem; color: #333; margin-bottom: 1.2rem; }
 
     .news-box { border: 1px solid #ddd; border-radius: 3px; padding: 1rem 1.2rem; margin-bottom: 2.5rem; background: #fafafa; }
     .news-box h2 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 0.7rem; }
@@ -84,20 +98,25 @@
   </nav>
 
   <div class="page">
+
+    <!-- Centered name + status + badge -->
+    <div class="profile-header">
+      <h1>Yanping Chen</h1>
+      <div class="status-line">
+        <span>PhD Candidate in Economics &nbsp;·&nbsp; Indiana University Bloomington</span>
+        <span class="jm-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Job market 2026–2027
+        </span>
+      </div>
+    </div>
+
+    <!-- Photo left, bio right -->
     <div class="hero">
       <div class="hero-photo">
         <img src="cyp.jpg" alt="Photo of Yanping Chen" />
       </div>
-
       <div class="hero-bio">
-        <h1>Yanping Chen</h1>
-        <div class="status-line">
-          <span>PhD Candidate in Economics &nbsp;·&nbsp; Indiana University Bloomington</span>
-          <span class="jm-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Job market 2026–2027
-          </span>
-        </div>
         <p>Welcome to my website!</p>
         <p>I am a PhD candidate in Economics at Indiana University Bloomington, and I will be on the 2026–2027 job market.</p>
         <p>
@@ -113,6 +132,7 @@
         <span class="news-text">Presenting at the North American Summer Meeting of the Econometric Society.</span>
       </div>
     </div>
+
   </div>
 
   <footer>
