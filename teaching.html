@@ -41,6 +41,77 @@
     hr { border: none; border-top: 1px solid #ddd; margin: 2rem 0; }
 
     footer { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem 2rem; font-size: 0.8rem; color: #aaa; border-top: 1px solid #eee; }
+
+    @media (max-width: 700px) {
+      html {
+        font-size: 15px;
+      }
+
+      .nav-inner {
+        height: auto;
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+
+      .nav-name {
+        font-size: 1.15rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        font-size: 1rem;
+      }
+
+      .page {
+        padding: 2rem 1.2rem 3rem;
+      }
+
+      h2.section-title {
+        font-size: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .course {
+        margin-bottom: 2rem;
+      }
+
+      .course-title {
+        font-size: 1.08rem;
+        line-height: 1.45;
+      }
+
+      .course-tags {
+        gap: 0.4rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .tag {
+        font-size: 0.72rem;
+        padding: 0.12rem 0.45rem;
+      }
+
+      .course-desc {
+        font-size: 0.97rem;
+        line-height: 1.75;
+        text-align: left;
+      }
+
+      hr {
+        margin: 1.6rem 0;
+      }
+
+      footer {
+        padding: 1rem 1.2rem 2rem;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
