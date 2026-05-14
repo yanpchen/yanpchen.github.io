@@ -15,12 +15,14 @@
     a:hover { text-decoration: underline; }
 
     nav { border-bottom: 1px solid #ddd; background: #fff; position: sticky; top: 0; z-index: 99; }
-    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; display: flex; align-items: center; height: 50px; gap: 2rem; }
-    .nav-home { font-weight: 700; font-size: 1.2rem; color: #111; text-decoration: none; white-space: nowrap; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; display: flex; align-items: center; justify-content: space-between; height: 50px; }
+    .nav-name { font-weight: 700; font-size: 1.2rem; color: #2a5fa8; text-decoration: none; white-space: nowrap; }
+    .nav-name:hover { text-decoration: none; color: #1a3f78; }
     .nav-links { display: flex; list-style: none; gap: 1.6rem; }
     .nav-links a { font-size: 1.2rem; color: #444; font-weight: 400; }
     .nav-links a:hover { color: #0066cc; text-decoration: none; }
     .nav-links a.active { font-weight: 700; color: #111; pointer-events: none; }
+    .nav-links a.dimmed { color: #bbb; pointer-events: none; }
 
     .page { max-width: 1200px; margin: 0 auto; padding: 3rem 3rem 4rem; }
 
@@ -42,8 +44,9 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-home" href="index.html">Home</a>
+      <a class="nav-name" href="index.html">Yanping Chen</a>
       <ul class="nav-links">
+        <li><a href="index.html" class="dimmed">Home</a></li>
         <li><a href="research.html" class="active">Research</a></li>
         <li><a href="teaching.html">Teaching</a></li>
         <li><a href="#">CV</a></li>
@@ -70,11 +73,25 @@
 
     <hr />
 
-    <h2 class="section-title">Work in Progress</h2>
+    <!-- HIDDEN: second working paper
     <div class="paper">
-       <div class="paper-title">
+      <div class="paper-title">
         Can Latent Error Clusters be Recovered from Regression Residuals?
       </div>
+      <div class="paper-meta">
+        With <a href="#">Maoran Xu</a>
+      </div>
+      <div class="paper-abstract">
+        Cluster-robust inference typically assumes the clustering structure is known a priori. This paper studies the problem of recovering the latent clustering structure of regression errors. We show that the OLS projection distorts the residual covariance in a way that depends on the geometric relationship between the column space of the design matrix and the community subspace, and propose a projection-corrected spectral clustering method that achieves exact recovery across the full range of alignment. Two empirical applications and a simulation study illustrate the practical consequences of ignoring residual dependence.
+      </div>
+    </div>
+
+    <hr />
+    -->
+
+    <h2 class="section-title">Work in Progress</h2>
+    <div class="paper">
+      <div class="paper-meta" style="color:#888; font-style:italic;">Coming soon.</div>
     </div>
 
   </div>
