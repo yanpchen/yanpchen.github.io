@@ -28,7 +28,7 @@
     .hero { display: grid; grid-template-columns: 280px 1fr; gap: 2.5rem; align-items: start; margin-bottom: 2.5rem; }
     .hero-photo img { width: 280px; display: block; border: 1px solid #ddd; }
     .hero-bio h1 { font-size: 2.0rem; font-weight: 700; color: #111; margin-bottom: 2.0rem; text-align: center; }
-    .hero-bio p { font-size: 1.2rem; color: #333; margin-bottom: 1.2rem; }
+    .hero-bio p { font-size: 1.0rem; color: #333; margin-bottom: 1.2rem; }
 
     .news-box { border: 1px solid #ddd; border-radius: 3px; padding: 1rem 1.2rem; margin-bottom: 2.5rem; background: #fafafa; }
     .news-box h2 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 0.7rem; }
@@ -62,16 +62,18 @@
     <div class="hero">
       <div class="hero-photo">
         <img src="cyp.jpg" alt="Photo of Yanping Chen" />
-        <p style="font-size:0.85rem; margin-top:0.6rem;">
-          <strong>Contact:</strong> <a href="mailto:chenyanp@iu.edu">chenyanp@iu.edu</a>
-        </p>
       </div>
 
       <div class="hero-bio">
         <h1>Yanping Chen</h1>
-        <p style="font-size:1.05rem; color:#555; margin-bottom:1.4rem; text-align:center;">PhD Candidate in Economics &nbsp;·&nbsp; Indiana University Bloomington</p>
+        <p style="font-size:1.05rem; color:#555; margin-top:-1.4rem; margin-bottom:0.8rem; text-align:center;">PhD Candidate in Economics &nbsp;·&nbsp; Indiana University Bloomington</p>
+        <p style="text-align:center; margin-bottom:1.2rem;">
+          <span style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.82rem; font-weight:700; color:#fff; background:#0066cc; padding:0.25rem 0.75rem; border-radius:3px; letter-spacing:0.03em;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Job market 2026–2027
+          </span>
+        </p>
         <p>Welcome to my website!</p>
-        <p>I am a PhD candidate in Economics at Indiana University, and I will be on the job market in 2026–2027.</p>
         <p>
           My research develops econometric methods for complex data structures, with an emphasis on geometric interpretation. My job market paper uses projection geometry to explain why classical cluster-robust variance estimators fail in modern empirical designs — and to construct an estimator that remains valid when they do not. I am also interested in network econometrics, including both methodology and empirical applications to economic and financial networks.
         </p>
@@ -83,6 +85,10 @@
       <div class="news-item">
         <span class="news-date">Jun 2026</span>
         <span class="news-text">Presenting at the North American Summer Meeting of the Econometric Society.</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Jun 2026</span>
+        <span class="news-text">Awarded the Daniel J. Duesterberg Award, Indiana University Bloomington.</span>
       </div>
     </div>
   </div>
