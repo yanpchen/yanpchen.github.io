@@ -14,65 +14,26 @@
     a { color: #0066cc; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ── Nav ── */
     nav { border-bottom: 1px solid #ddd; background: #fff; position: sticky; top: 0; z-index: 99; }
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 50px;
-    }
-    .nav-name {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #2a5fa8;
-      text-decoration: none;
-      white-space: nowrap;
-    }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; display: flex; align-items: center; justify-content: space-between; height: 50px; }
+    .nav-name { font-weight: 700; font-size: 1.2rem; color: #2a5fa8; text-decoration: none; white-space: nowrap; }
     .nav-name:hover { text-decoration: none; color: #1a3f78; }
     .nav-links { display: flex; list-style: none; gap: 1.6rem; }
     .nav-links a { font-size: 1.0rem; color: #444; font-weight: 400; }
     .nav-links a:hover { color: #0066cc; text-decoration: none; }
     .nav-links a.active { font-weight: 700; color: #111; pointer-events: none; }
 
-    /* ── Page ── */
     .page { max-width: 1200px; margin: 0 auto; padding: 3rem 3rem 4rem; }
 
-    /* ── Centered header ── */
     .profile-header { text-align: center; margin-bottom: 2rem; }
     .profile-header h1 { font-size: 2.0rem; font-weight: 700; color: #111; margin-bottom: 0.4rem; }
-    .status-line {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      font-size: 1.05rem;
-      color: #555;
-    }
-    .jm-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      color: #2a5fa8;
-      background: #e8edf7;
-      border: 1px solid #c0cceb;
-      padding: 0.2rem 0.6rem;
-      border-radius: 3px;
-    }
+    .status-line { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.55rem; font-size: 1.05rem; color: #555; }
+    .jm-badge { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em; color: #2a5fa8; background: #e8edf7; border: 1px solid #c0cceb; padding: 0.2rem 0.6rem; border-radius: 3px; }
 
-    /* ── Hero ── */
     .hero { display: grid; grid-template-columns: 280px 1fr; gap: 2.5rem; align-items: start; margin-bottom: 2.5rem; }
     .hero-photo img { width: 280px; display: block; border: 1px solid #ddd; }
     .hero-bio p { font-size: 1.1rem; color: #333; margin-bottom: 1.2rem; }
 
-    /* ── News ── */
     .news-box { border: 1px solid #ddd; border-radius: 3px; padding: 1rem 1.2rem; margin-bottom: 2.5rem; background: #fafafa; }
     .news-box h2 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 0.7rem; }
     .news-item { display: flex; gap: 1rem; font-size: 0.88rem; padding: 0.4rem 0; border-top: 1px solid #eee; }
@@ -121,7 +82,7 @@
       </div>
       <div class="hero-bio">
         <p>Welcome to my website!</p>
-        <p>I am a PhD candidate in Economics at Indiana University Bloomington, and I will be on the job market in 2026-2027.</p>
+        <p>I am a PhD candidate in Economics at Indiana University Bloomington, and I will be on the job market in 2026–2027.</p>
         <p>
           My research develops econometric methods for complex data structures, with an emphasis on geometric interpretation. My job market paper uses projection geometry to explain why classical cluster-robust variance estimators fail in modern empirical designs — and to construct an estimator that remains valid when they do not. I am also interested in network econometrics, including both methodology and empirical applications to economic and financial networks.
         </p>
@@ -129,10 +90,18 @@
     </div>
 
     <div class="news-box">
-      <h2>News</h2>
+      <h2>Upcoming Presentations</h2>
+      <div class="news-item">
+        <span class="news-date">Jul 2026</span>
+        <span class="news-text">Presenting at the Singapore Economic Review Conference.</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Jul 2026</span>
+        <span class="news-text">Presenting at the CES China Annual Meeting in Chengdu, China.</span>
+      </div>
       <div class="news-item">
         <span class="news-date">Jun 2026</span>
-        <span class="news-text">Presenting at the North American Summer Meeting of the Econometric Society.</span>
+        <span class="news-text">Presenting at the Econometric Society North American Summer Meeting in Atlanta, US.</span>
       </div>
     </div>
 
