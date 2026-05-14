@@ -43,7 +43,90 @@
 
     footer { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem 2rem; font-size: 0.8rem; color: #aaa; border-top: 1px solid #eee; }
 
-    @media (max-width: 580px) {
+    @media (max-width: 700px) {
+  html {
+    font-size: 15px;
+  }
+
+  .nav-inner {
+    height: auto;
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .nav-name {
+    font-size: 1.15rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .page {
+    padding: 2rem 1.2rem 3rem;
+  }
+
+  .profile-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .status-line {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .status-line span:first-child {
+    display: block;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    text-align: left;
+  }
+
+  .hero-photo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-photo img {
+    width: 170px;
+    max-width: 70%;
+  }
+
+  .hero-bio p {
+    font-size: 1rem;
+  }
+
+  .news-box {
+    padding: 0.9rem 1rem;
+  }
+
+  .news-item {
+    display: block;
+    padding: 0.65rem 0;
+  }
+
+  .news-date {
+    display: block;
+    margin-bottom: 0.15rem;
+    min-width: auto;
+    font-weight: 700;
+  }
+
+  footer {
+    padding: 1rem 1.2rem 2rem;
+    text-align: center;
+  }
+}{
       .hero { grid-template-columns: 1fr; }
       .hero-photo img { width: 140px; }
     }
