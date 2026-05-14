@@ -26,26 +26,17 @@
 
     .page { max-width: 1200px; margin: 0 auto; padding: 3rem 3rem 4rem; }
 
-    h2.section-title { font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #888; margin-bottom: 1.2rem; margin-top: 2.2rem; }
+    h2.section-title { font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #888; margin-bottom: 1.8rem; margin-top: 2.8rem; }
     h2.section-title:first-child { margin-top: 0; }
 
-    .role-block { margin-bottom: 1.8rem; }
-    .role-label { font-size: 1.05rem; font-weight: 700; color: #111; margin-bottom: 0.1rem; }
-    .role-institution { font-size: 0.95rem; color: #555; margin-bottom: 0.6rem; }
-
-    table.course-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-    table.course-table td { padding: 0.3rem 0.6rem 0.3rem 0; vertical-align: top; color: #333; }
-    table.course-table td:first-child { width: 60%; }
-    table.course-table td:last-child { color: #666; white-space: nowrap; text-align: right; }
-    table.course-table tr { border-top: 1px solid #eee; }
-    table.course-table tr:first-child { border-top: none; }
-
-    /* Course description styles */
-    .course-desc-row td { padding-top: 0 !important; padding-bottom: 0.6rem !important; }
-    .course-desc { font-size: 0.95rem; color: #666; line-height: 1.6; max-width: 640px; }
-    .course-desc-toggle { font-size: 1.0rem; color: #0066cc; cursor: pointer; background: none; border: none; padding: 0; font-family: inherit; margin-top: 0.15rem; display: inline-block; }
-    .course-desc-toggle:hover { text-decoration: underline; }
-    .course-desc-text { margin-top: 0.35rem; }
+    .course { margin-bottom: 2.4rem; }
+    .course-title { font-size: 1.15rem; font-weight: 700; color: #111; margin-bottom: 0.25rem; }
+    .course-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.5rem; }
+    .tag { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.15rem 0.55rem; border-radius: 3px; }
+    .tag-level { background: #f0f0f0; color: #555; }
+    .tag-location { background: #f0f0f0; color: #555; }
+    .tag-terms { background: #fff; color: #888; border: 1px solid #ddd; }
+    .course-desc { font-size: 0.95rem; color: #444; line-height: 1.75; }
 
     hr { border: none; border-top: 1px solid #ddd; margin: 2rem 0; }
 
@@ -70,74 +61,37 @@
 
     <h2 class="section-title">Invited Instructor</h2>
 
-    <div class="role-block">
-      <div class="role-label">Zhejiang University of Finance and Economics</div>
-      <table class="course-table">
-        <tr>
-          <td>Structural Econometrics (PhD)</td>
-          <td>Summer 2025</td>
-        </tr>
-      </table>
+    <div class="course">
+      <div class="course-title">Structural Econometrics</div>
+      <div class="course-tags">
+        <span class="tag tag-level">PhD</span>
+        <span class="tag tag-location">Zhejiang University of Finance and Economics</span>
+        <span class="tag tag-terms">Su 2025</span>
+      </div>
     </div>
 
     <hr />
 
     <h2 class="section-title">Associate Instructor</h2>
 
-    <div class="role-block">
-      <div class="role-label">Department of Economics, Indiana University Bloomington</div>
-      <table class="course-table">
-        <tr>
-          <td>
-            E371 — Introduction to Applied Econometrics (undergraduate)
-            <div>
-              <button class="course-desc-toggle" onclick="toggleDesc('e371-desc', this)">▸ course description</button>
-              <div id="e371-desc" class="course-desc" style="display:none;">
-                <div class="course-desc-text">This course introduces applied econometrics with emphasis on both implementation and reasoning. Students learn to translate economic questions into regression specifications, interpret results, and assess whether conclusions are credible. Core methods include linear regression, fixed effects for panel data, binary response models, and instrumental variables, all implemented in R using real datasets. AI tools are explicitly integrated into the course: students are encouraged to use them for coding, exploration, and drafting, while being held responsible for verifying correctness and defending every choice they make. The course concludes with an optional group mini-project in which students use AI to independently learn an econometric method and then teach it to the class with a live data illustration.</div>
-              </div>
-            </div>
-          </td>
-          <td>Spring 2025, Spring 2026</td>
-        </tr>
-        <tr>
-          <td>
-            E370 — Statistical Analysis for Business and Economics (undergraduate)
-            <div>
-              <button class="course-desc-toggle" onclick="toggleDesc('e370-desc', this)">▸ course description</button>
-              <div id="e370-desc" class="course-desc" style="display:none;">
-                <div class="course-desc-text">This course introduces statistics as a science of understanding and analyzing economic data. Topics include graphical and numerical summaries of data, probability theory, population and sampling distributions, hypothesis testing, and regression analysis. Students develop the tools needed to answer real-world questions and gain a thorough understanding of statistical inference in economics and business contexts. Excel is used for data analysis and computation throughout the course.</div>
-              </div>
-            </div>
-          </td>
-          <td>Summer/Fall 2023, Spring/Summer 2024, Summer 2025, Summer 2026</td>
-        </tr>
-      </table>
+    <div class="course">
+      <div class="course-title">E371 — Introduction to Applied Econometrics</div>
+      <div class="course-tags">
+        <span class="tag tag-level">Undergraduate</span>
+        <span class="tag tag-location">Indiana University Bloomington</span>
+        <span class="tag tag-terms">Sp 2025 · Sp 2026</span>
+      </div>
+      <div class="course-desc">This course introduces applied econometrics with emphasis on both implementation and reasoning. Students learn to translate economic questions into regression specifications, interpret results, and assess whether conclusions are credible. Core methods include linear regression, fixed effects for panel data, binary response models, and instrumental variables, all implemented in R using real datasets. AI tools are explicitly integrated into the course: students are encouraged to use them for coding, exploration, and drafting, while being held responsible for verifying correctness and defending every choice they make. The course concludes with an optional group mini-project in which students use AI to independently learn an econometric method and then teach it to the class with a live data illustration.</div>
     </div>
 
-    <hr />
-
-    <h2 class="section-title">Teaching Assistant</h2>
-
-    <div class="role-block">
-      <div class="role-label">Department of Economics, Indiana University Bloomington</div>
-      <table class="course-table">
-        <tr>
-          <td>E671 — Econometrics III (PhD)</td>
-          <td>Fall 2024</td>
-        </tr>
-        <tr>
-          <td>E371 — Introduction to Applied Econometrics (undergraduate)</td>
-          <td>Fall 2025</td>
-        </tr>
-        <tr>
-          <td>E370 — Statistical Analysis for Business and Economics (undergraduate)</td>
-          <td>Fall 2021, Spring 2022</td>
-        </tr>
-        <tr>
-          <td>B251 — Fundamentals of Economics for Business I (undergraduate)</td>
-          <td>Fall 2022, Spring 2023</td>
-        </tr>
-      </table>
+    <div class="course">
+      <div class="course-title">E370 — Statistical Analysis for Business and Economics</div>
+      <div class="course-tags">
+        <span class="tag tag-level">Undergraduate</span>
+        <span class="tag tag-location">Indiana University Bloomington</span>
+        <span class="tag tag-terms">Su/Fa 2023 · Sp/Su 2024 · Su 2025 · Su 2026</span>
+      </div>
+      <div class="course-desc">This course introduces statistics as a science of understanding and analyzing economic data. Topics include graphical and numerical summaries of data, probability theory, population and sampling distributions, hypothesis testing, and regression analysis. Students develop the tools needed to answer real-world questions and gain a thorough understanding of statistical inference in economics and business contexts. Excel is used for data analysis and computation throughout the course.</div>
     </div>
 
   </div>
@@ -148,13 +102,6 @@
 
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
-
-    function toggleDesc(id, btn) {
-      const el = document.getElementById(id);
-      const hidden = el.style.display === 'none';
-      el.style.display = hidden ? 'block' : 'none';
-      btn.textContent = hidden ? '▾ course description' : '▸ course description';
-    }
   </script>
 </body>
 </html>
