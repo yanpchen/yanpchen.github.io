@@ -40,6 +40,13 @@
     table.course-table tr { border-top: 1px solid #eee; }
     table.course-table tr:first-child { border-top: none; }
 
+    /* Course description styles */
+    .course-desc-row td { padding-top: 0 !important; padding-bottom: 0.6rem !important; }
+    .course-desc { font-size: 0.88rem; color: #666; line-height: 1.6; max-width: 640px; }
+    .course-desc-toggle { font-size: 0.82rem; color: #0066cc; cursor: pointer; background: none; border: none; padding: 0; font-family: inherit; margin-top: 0.15rem; display: inline-block; }
+    .course-desc-toggle:hover { text-decoration: underline; }
+    .course-desc-text { margin-top: 0.35rem; }
+
     hr { border: none; border-top: 1px solid #ddd; margin: 2rem 0; }
 
     footer { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem 2rem; font-size: 0.8rem; color: #aaa; border-top: 1px solid #eee; }
@@ -81,12 +88,28 @@
       <div class="role-label">Department of Economics, Indiana University Bloomington</div>
       <table class="course-table">
         <tr>
-          <td>E371 — Introduction to Applied Econometrics (undergraduate)</td>
+          <td>
+            E371 — Introduction to Applied Econometrics (undergraduate)
+            <div>
+              <button class="course-desc-toggle" onclick="toggleDesc('e371-desc', this)">▸ course description</button>
+              <div id="e371-desc" class="course-desc" style="display:none;">
+                <div class="course-desc-text">This course treats econometrics as both a toolkit and a way of thinking. Lectures are structured around a recurring question: <em>why does a naive approach fail here, and what method addresses it?</em> Starting from regression fundamentals, students work up to panel data, binary response models, and instrumental variables — always with emphasis on credible identification and clear communication of results. Empirical work is done in R throughout.<br><br>Students are encouraged to use AI tools as part of their workflow, with the expectation that they can verify, explain, and defend every result they produce. A capstone mini-project asks student groups to teach a method to the class and illustrate it with real data — developing both technical depth and the ability to communicate econometric reasoning to peers.</div>
+              </div>
+            </div>
+          </td>
           <td>Spring 2025, Spring 2026</td>
         </tr>
         <tr>
-          <td>E370 — Statistical Analysis for Business and Economics (undergraduate)</td>
-          <td>Summer/Fall 2023, Spring/Summer 2024, Summer/Fall 2025, Summer 2026</td>
+          <td>
+            E370 — Statistical Analysis for Business and Economics (undergraduate)
+            <div>
+              <button class="course-desc-toggle" onclick="toggleDesc('e370-desc', this)">▸ course description</button>
+              <div id="e370-desc" class="course-desc" style="display:none;">
+                <div class="course-desc-text">This course introduces statistics as a science of understanding and analyzing economic data. Topics include graphical and numerical summaries of data, probability theory, population and sampling distributions, hypothesis testing, and regression analysis. Students develop the tools needed to answer real-world questions and gain a thorough understanding of statistical inference in economics and business contexts. Excel is used for data analysis and computation throughout the course.</div>
+              </div>
+            </div>
+          </td>
+          <td>Summer/Fall 2023, Spring/Summer 2024, Summer 2025, Summer 2026</td>
         </tr>
       </table>
     </div>
@@ -122,6 +145,16 @@
   <footer>
     &copy; <span id="yr"></span> Yanping Chen &nbsp;·&nbsp; Indiana University Bloomington
   </footer>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    function toggleDesc(id, btn) {
+      const el = document.getElementById(id);
+      const hidden = el.style.display === 'none';
+      el.style.display = hidden ? 'block' : 'none';
+      btn.textContent = hidden ? '▾ course description' : '▸ course description';
+    }
+  </script>
 </body>
 </html>
