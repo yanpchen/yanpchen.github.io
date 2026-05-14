@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research | Yanping Chen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; font-weight: 400; color: #333; background: #fff; line-height: 1.75; }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav { border-bottom: 1px solid #ddd; background: #fff; position: sticky; top: 0; z-index: 99; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; display: flex; align-items: center; height: 50px; gap: 2rem; }
+    .nav-home { font-weight: 700; font-size: 1.2rem; color: #111; text-decoration: none; white-space: nowrap; }
+    .nav-links { display: flex; list-style: none; gap: 1.6rem; }
+    .nav-links a { font-size: 1.2rem; color: #444; font-weight: 400; }
+    .nav-links a:hover { color: #0066cc; text-decoration: none; }
+    .nav-links a.active { font-weight: 700; color: #111; pointer-events: none; }
+
+    .page { max-width: 1200px; margin: 0 auto; padding: 3rem 3rem 4rem; }
+
+    h2.section-title { font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #888; margin-bottom: 1.2rem; margin-top: 2.2rem; }
+    h2.section-title:first-child { margin-top: 0; }
+
+    .paper { margin-bottom: 1.6rem; }
+    .paper-title { font-size: 1.15rem; font-weight: 700; color: #111; }
+    .paper-note { font-size: 0.92rem; color: #555; font-style: italic; }
+    .paper-meta { font-size: 0.92rem; color: #555; margin-top: 0.2rem; }
+    .paper-abstract { font-size: 0.95rem; color: #444; margin-top: 0.5rem; }
+
+    hr { border: none; border-top: 1px solid #ddd; margin: 2rem 0; }
+
+    footer { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem 2rem; font-size: 0.8rem; color: #aaa; border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-home" href="index.html">Home</a>
+      <ul class="nav-links">
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="#">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <h2 class="section-title">Working Papers</h2>
+
+    <div class="paper">
+      <div class="paper-title">
+        Robust Variance Estimation in Linear Regressions: A Projection-Geometry Perspective
+        <span class="paper-note">&nbsp;[Job Market Paper]</span>
+      </div>
+      <div class="paper-meta">
+        Presentations: North American Summer Meeting of the Econometric Society (2026), CES China Annual Conference (2026), Singapore Economic Review Conference (2026)
+      </div>
+      <div class="paper-abstract">
+        Inference in linear regression relies on the plug-in principle: OLS residuals approximate unobserved errors, so residual moments estimate the sampling variance. This principle fails when the residual-maker exhibits non-negligible off-diagonal mass — as occurs with many controls and multi-way fixed effects — causing classical heteroskedasticity-consistent (HC) and cluster-robust variance estimators (CRVE) to understate sampling uncertainty. This paper shows that the variance of the OLS estimator admits an exact finite-sample representation as a Riesz functional of latent covariance blocks, with observable residual moments linked to this target through a linear operator determined by projection geometry. The proposed Riesz variance estimator strictly dominates classical HC and CRVE, remains valid when cluster-specific leverage matrices are singular, and is implemented via a scalable matrix-free algorithm.
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="paper">
+      <div class="paper-title">
+        Can Latent Error Clusters be Recovered from Regression Residuals?
+      </div>
+      <div class="paper-meta">
+        With <a href="#">Maoran Xu</a>
+      </div>
+      <div class="paper-abstract">
+        Cluster-robust inference typically assumes the clustering structure is known a priori. This paper studies the problem of recovering the latent clustering structure of regression errors. We show that the OLS projection distorts the residual covariance in a way that depends on the geometric relationship between the column space of the design matrix and the community subspace, and propose a projection-corrected spectral clustering method that achieves exact recovery across the full range of alignment. Two empirical applications and a simulation study illustrate the practical consequences of ignoring residual dependence.
+      </div>
+    </div>
+
+    <hr />
+
+    <h2 class="section-title">Work in Progress</h2>
+    <div class="paper">
+      <div class="paper-meta" style="color:#888; font-style:italic;">Coming soon.</div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; <span id="yr"></span> Yanping Chen &nbsp;·&nbsp; Indiana University Bloomington
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
