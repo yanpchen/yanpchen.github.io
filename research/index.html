@@ -18,6 +18,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <script>
+      window.MathJax = {tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }};
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { font-size: 16px; scroll-behavior: smooth; }
@@ -45,7 +51,7 @@
     .paper-note { font-size: 1rem; color: #555; font-style: italic; }
     .paper-meta { font-size: 0.92rem; color: #555; margin-top: 0.2rem; }
     .paper-abstract { font-size: 1rem; color: #444; margin-top: 0.5rem; }
-
+    
     hr { border: none; border-top: 1px solid #ddd; margin: 2rem 0; }
 
     footer { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem 2rem; font-size: 0.8rem; color: #aaa; border-top: 1px solid #eee; }
@@ -146,7 +152,7 @@
         <span class="paper-note">&nbsp;[Job Market Paper]</span>
       </div>
       <div class="paper-meta">
-        Presentations: NASM Econometric Society (2026) · CES China (2026) · Singapore Economic Review Conference (2026) · MEG Conference · Canadian Econometric Study Group (Poster) · ESAM · AE^2 of ANZAE
+        Presentations: NASM Econometric Society (2026) · CES China (2026) · Singapore Economic Review Conference (2026) · MEG Conference · Canadian Econometric Study Group (Poster) · ESAM · AE$^2$ of ANZAE
       </div>
       <div class="paper-abstract">
         Heteroskedasticity- and cluster-robust standard errors plug OLS residuals in for the unobserved errors and correct each residual for its own leverage. Each residual, however, also carries the errors of other observations, and this projection spillover biases the classical corrections. For inference on $a'\beta$, we propose a level factor, computed from the design alone, that measures the size of this bias. Our key idea is to estimate the variance of $a'\hat\beta$ directly rather than correct the residuals: since both the variance and the expected residual products are linear in the error covariance, estimation is a linear inverse problem, which we solve by a matrix-free algorithm. The resulting Riesz variance estimator is exactly unbiased whenever the design identifies the variance, and is consistent and yields an asymptotically normal $t$-statistic with many controls and growing clusters. It exists where block-inversion corrections (CR2, CR3, and leave-cluster-out) do not. A general theorem extends it to any estimator linear in the errors and any dependency graph, including multi-way clustering and network, spatial, and banded serial dependence. For weighted and generalized least squares, the within-cluster products of the weighted residuals can lose information that the full set of products retains, and a change of coordinates restores it. A degrees-of-freedom calibration and restricted covariance classes handle designs with few clusters. In simulations the calibrated estimator attains nominal coverage where classical estimators do not; in an application to colonial governor promotions, it changes the conclusions for three of five connection measures and for three fiscal-performance results.
@@ -157,7 +163,7 @@
 
     <div class="paper">
       <div class="paper-title">
-        <a href="/Identification.pdf" target="_blank" rel="noopener">Projection Spillover and Exact Robust Variance Estimation</a>
+        <a href="/Identification.pdf" target="_blank" rel="noopener">Covariance Identification from Regression Residuals</a>
         <span class="paper-note">&nbsp;[Job Market Paper]</span>
       </div>
       <div class="paper-abstract">
